@@ -13,4 +13,7 @@ export class AppComponent {
   deletePerson(id: string) {
     this.people = this.people.filter(person => person.id !== id);
   }
+  addPerson(newPerson: Person) {
+    this.people.push(newPerson);
+  }
 }

@@ -1,8 +1,11 @@
 <app-top-bar></app-top-bar>
+<app-person-form (addPersonEvent)="addPerson($event)"></app-person-form>
 
-<div class="container">
-  <router-outlet></router-outlet>
+<div *ngFor="let person of people">
+  <app-person [person]="person" (deleteMe)="deletePerson($event)"></app-person>
 </div>
+
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
